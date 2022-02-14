@@ -59,18 +59,16 @@ public class Userdetails {
 		this.email = email;
 	}
 
-	public int getContact() {
+	public long getContact() {
 		return contact;
 	}
 
-	public void setContact(int contact) {
+	public void setContact(long contact) {
 		this.contact = contact;
 	}
 
 	private    String password;
 	private    String occupation;
 	private    String email;
-	private    int contact;
-
-
+	private    long contact;
 }

@@ -12,7 +12,7 @@ public class Restservice {
     UserdetailsRepository userdetailsRepository;
 
     public  void  saveUser(String user){
-
+//ObjectMapper;JAckson binding
         Userdetails userdetails = new Userdetails();
         JsonObject jsonObject2 = new JsonParser().parse(user).getAsJsonObject();
         JsonObject jsonObject = jsonObject2.getAsJsonObject("userdetails");
@@ -23,7 +23,7 @@ public class Restservice {
         userdetails.setPassword(jsonObject.get("password").getAsString());
         userdetails.setEmail(jsonObject.get("email").getAsString());
         userdetails.setOccupation(jsonObject.get("occupation").getAsString());
-        userdetails.setContact(jsonObject.get("contact").getAsInt());
+        userdetails.setContact(jsonObject.get("contact").getAsLong());
         userdetailsRepository.save(userdetails);
     }
 

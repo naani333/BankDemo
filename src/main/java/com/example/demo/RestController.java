@@ -32,6 +32,7 @@ public class RestController {
 	@PostMapping("/getUser")
 	@CrossOrigin(origins = "http://localhost:3000")
 	public String getUser(@RequestBody String user) {
+		System.out.println(user);
 		return restservice.getUser(user);
 	}
 
